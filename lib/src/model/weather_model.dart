@@ -13,4 +13,7 @@ class WeatherModel {
       wind: map['wind'],
     );
   }
+
+  static WeatherModel stub() =>
+      WeatherModel(day: "day", temperature: "temperature", wind: "wind");
 }
