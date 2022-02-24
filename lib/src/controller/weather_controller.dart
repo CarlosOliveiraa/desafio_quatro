@@ -5,10 +5,11 @@ import '../model/weather_model.dart';
 
 class WeatherController extends ChangeNotifier {
   final WeatherService service;
+  final weatherController = TextEditingController();
 
   WeatherController(this.service);
 
-   List<WeatherModel> list = [];
+  List<WeatherModel> list = [];
 
   Future<void> getWeather(String city) async {
     final response = await service.getWeather(city);
